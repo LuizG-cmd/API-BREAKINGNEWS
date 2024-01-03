@@ -1,5 +1,14 @@
 const express = require('express')
+
+
+const userRoute = require('./src/routes/user.route')
+
+
+
 const app = express()
+
+
+app.use('/soma', userRoute)
 
 
 //ROTA
@@ -13,9 +22,8 @@ const app = express()
     // Function (Callback) - Responsavel por executar algum comando
 
 
-app.get("/soma", (req, res) => {
-  const soma = 100 + 1
-  res.send({soma : soma})
-})
+/*app.get("/soma", (req, res) => {
+  
+})*/
 
 app.listen(3000)
